@@ -1,0 +1,27 @@
+# DICT
+from preloaded import MORSE_CODE
+
+def decode_morse(morse_code):
+
+# input is a STR
+
+# output is a STR
+    string = ''
+
+# separate input into words
+    words = morse_code.strip().split('   ')
+    
+# separate words into letters
+    for word in words:
+        letters = word.split(' ')
+        word = ''
+    
+# replace morse code with character
+        for letter in letters:
+            letter = MORSE_CODE[letter]
+            
+# add character to output string
+            word+=letter
+        string += word + ' '
+
+    return string[:-1]
